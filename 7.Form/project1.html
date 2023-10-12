@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    
+    <style>
+        fieldset {
+            background-color: lightcyan;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+
+    <form action="/6_Table/table.htm" method="post">
+        <fieldset>
+            <fieldset>
+                <legend><mark><b>Your Details</b></mark></legend>
+                <label for="name">Name :
+                <input type="text" name="first-name" id="name" placeholder="first name" autofocus />
+                <input type="text" name="middle-name" id="name" placeholder="middle name" title="This tag is Disabled" disabled />
+                <input type="text" name="last-name" id="name" placeholder="last name" autocomplete />
+                <br />
+                <label for="email">Email :
+                <input type="email" name="email" id="email" placeholder="example@domain.com" style="margin-top:10px;" />
+                <br />
+                <label for="phone">Phone :
+                <input type="tel" name="PhoneNo" id="phone" placeholder="Eg. +911400180022" style="margin-top:10px;" />
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend><mark><b>Delivery Address</b></mark></legend>
+                Address :
+                <textarea name="comment" cols="25" rows="5"></textarea>
+                <br />
+                Post Code :
+                <input type="text" name="pin" style="margin-top:10px;" />
+                <br />
+                Country :
+                <input type="text" name="country" style="margin-top:10px;" />
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend><mark><b>Card Details</b></mark></legend>
+                Card Type :
+                <input type="radio" name="card-type" value="visa" style="margin-left: 5px;" />VISA
+                <input type="radio" name="card-type" value="amfx" style="margin-left: 5px;" />AmFx
+                <input type="radio" name="card-type" value="mastercard" style="margin-left: 5px;" />Mastercard
+                <br />
+                Card Number :
+                <input type="text" name="card-number" style="margin-top: 10px;" />
+                <br />
+                Security Code :
+                <input type="password" name="security-code" style="margin-top: 10px;" pattern="[0-9]{6}" required />
+                <br />
+                Cardholder Name:
+                <input type="text" name="cardname" placeholder="Exact name as on the card" style="margin-top: 10px;"/>
+            </fieldset>
+            <br />
+            <fieldset>
+                <input type="button" value="BUY IT!" onclick="alert('Successfully Purchased')" />
+                <input type="reset" value="RESET" />
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+
+</html>

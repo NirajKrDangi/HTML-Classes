@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Attribute</title>
+    <style>
+        legend,
+        p {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        body,
+        div {
+            background-color: #e0eaf2;
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        input[type=password],
+        input[type=date],
+        input[type=datetime-local],
+        input[type=month],
+        input[type=search],
+        input[type=time],
+        input[type=url],
+        input[type=week],
+        input[type=date],
+        input[type=number],
+        input[type=file],
+        select,
+        textarea,
+        #dob {
+            width: 100%;
+            padding: 10px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=button],
+        input[type=submit],
+        input[type=reset],
+        button {
+            padding: 10px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #dob {
+            width: 100%;
+            padding: 10px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;"><u>Form Element/Attributes</u></h2>
+
+    <!-- action/target/method/autocomplete Attribute -->
+    <form action="/action_page.php" method="post" target="_self" name="registration_form" autocomplete="on">
+        <fieldset>
+            <legend>Form Element</legend>
+            <!-- input & label -->
+            <p>Input & label</p>
+            <label for="input">Input Element:</label>
+            <input type="input" id="input">
+            <br>
+            <hr>
+
+            <!-- select & option -->
+            <h4>Select & Option</h4>
+            <label for="car">Choose a car:</label>
+            <select name="cars" id="car">
+                <option value="volvo">Volvo</option>
+                <option value="mahindra">Mahindra</option>
+                <option value="tesla">Tesla</option>
+                <option value="bmw">BMW</option>
+                <option value="maruti">Maruti</option>
+            </select>
+            <br>
+            <hr>
+
+            <!-- select & option with multiple & size attribute -->
+            <h4>Select & Option: Attribute: size, multiple</h4>
+            <label for="multicar">Choose a car:</label>
+            <select name="cars" id="multicar" size="3" multiple>
+                <option value="volvo">Volvo</option>
+                <option value="mahindra">Mahindra</option>
+                <option value="tesla">Tesla</option>
+                <option value="bmw">BMW</option>
+                <option value="maruti">Maruti</option>
+            </select>
+            <code>multiple selection using [Ctrl+Select]</code>
+            <hr>
+
+            <!-- select & option -->
+            <h4>Select & Option</h4>
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars">
+                <optgroup label="Indian Cars">
+                    <option value="mahindra">Mahindra</option>
+                    <option value="maruti">Maruti</option>
+                    <option value="Hyundai">Hyundai</option>
+                </optgroup>
+                <optgroup label="American Car">
+                    <option value="tesla">Tesla</option>
+                    <option value="bmw">BMW</option>
+                    <option value="volvo">Volvo</option>
+                </optgroup>
+            </select>
+            <br>
+            <hr>
+
+            <!-- textarea  -->
+            <h4>Textarea</h4>
+            <label for="comment">Comments:</label>
+            <textarea name="comment" id="comment" cols="30" rows="6" placeholder="type something"></textarea>
+            <hr>
+
+            <button type="button" onclick="alert('Hello World')">Click me!</button>
+            <hr>
+
+            <!-- fieldset & legend -->
+            <h4>Fieldset & Legend</h4>
+            <fieldset>
+                <legend>Personal Details</legend>
+                <label for="fname0">First name: </label>
+                <input type="text" id="fname0" name="fname" placeholder="First">
+                <br>
+                <label for="lname0">Last name: </label>
+                <input type="text" id="lname0" fname="lname" placeholder="Last">
+                <br>
+
+                <label for="add">Address: </label><br>
+                <textarea id="add" cols="30" rows="6" placeholder="type something"></textarea>
+            </fieldset>
+            <hr>
+
+            <!-- datalist -->
+            <h4>Datalist </h4>
+            <label for="browser">Choose any one browsers</label>
+            <input list="browsers" id="browser" name="browser">
+            <datalist id="browsers">
+                <option value="Firefox">
+                <option value="Brave">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+        </fieldset>
+        <br>
+
+
+        <!---**********************************************************************-->
+
+
+        <h2 style="text-align: center;"><u>Html Input Types</u></h2>
+        <fieldset>
+            <legend>Input Type</legend>
+
+            <!-- type text -->
+            <p>Type: text</p>
+            <label for="fname">First name: </label>
+            <input type="text" id="fname" name="fname" placeholder="First">
+            <br>
+            <label for="lname">Last name: </label>
+            <input type="text" id="lname" name="lname" placeholder="Last">
+            <hr>
+
+            <!-- type password -->
+            <p>Type: password</p>
+            <label for="user">Username: </label>
+            <input type="text" id="user" name="username" placeholder="@username">
+            <br><br>
+            <label for="pass">Password: </label>
+            <input type="password" name="pass" id="pass">
+            <hr>
+
+            <!-- type submit -->
+            <p>Type: submit</p>
+            <label for="user1">Username: </label>
+            <input type="text" id="user1" name="username" placeholder="@username">
+            <br>
+            <label for="pass2">Password: </label>
+            <input type="password" name="pass" id="pass2">
+            <br>
+            <input type="submit" value="Submit">
+            <hr>
+
+            <!-- type reset -->
+            <p>Type: reset</p>
+            <label for="user2">Username: </label>
+            <input type="text" id="user2" name="username" placeholder="username">
+            <br>
+            <label for="pass3">Password: </label>
+            <input type="password" name="pass" id="pass3">
+            <br>
+            <input type="reset" value="Reset">
+            <hr>
+
+            <!-- type radio -->
+            <p>Type: radio</p>
+            <p>Favourite language:</p> 
+
+            <input type="radio" name="language" id="html">
+            <label for="html">HTML</label>
+
+            <input type="radio" name="language" id="css" value="css">
+            <label for="css">CSS</label>
+            
+            <input type="radio" name="language" id="java" value="java">
+            <label for="java">JAVA</label>
+            <hr>
+
+            <!-- type checkbox -->
+            <p>Type: checkbox</p>
+            <input type="checkbox" id="vehicle1" name="bike" value="Bike">
+            <label for="vehicle1">I have a bike</label>
+            <br>
+            <input type="checkbox" id="vehicle2" name="car" value="Car">
+            <label for="vehicle2">I have a car</label>
+            <br>
+            <input type="checkbox" id="vehicle3" name="boat" value="Boat">
+            <label for="vehicle3">I have a boat</label>
+            <hr>
+
+            <!-- type button -->
+            <p>Type: button</p>
+            <input type="button" value="click Me!" onclick="alert('Hello World!')">
+            <hr>
+
+            <!-- type color -->
+            <p>Type: color</p>
+            <label for="color">Choose your favourite color: </label>
+            <input type="color" name="favColor" id="color">
+            <hr>
+
+            <!-- type date -->
+            <p>Type: date</p>
+            <label for="birthday">Birthday: </label>
+            <input type="date" name="birthday" id="birthday">
+            <!-- attribute: min & max -->
+            <br>
+            <label for="dateAfter">Enter a date after: 2005-05-31</label><br>
+            <input type="date" name="min" id="dateAfter" min="2005-05-01">
+            <br>
+            <label for="dateBefore">Enter a date before: 2011-12-31</label><br>
+            <input type="date" name="max" id="dateBefore" max="2011-12-31">
+            <hr>
+
+            <!-- type: datetime-local -->
+            <p>Type: datetime-local</p>
+            <label for="date&time">Enter Dob with your local time: </label><br>
+            <input type="datetime-local" name="date with time" id="date&tme">
+            <hr>
+
+            <!-- type email -->
+            <p>Type: email</p>
+            <label for="mail">Email: </label>
+            <input type="email" id="mail" name="email" placeholder="xyz@domain.com">
+            <hr>
+
+            <!-- type image button -->
+            <p>Type: image</p>
+            <label for="fname">First name: </label>
+            <input type="text" id="fname" fname="fname" placeholder="First">
+            <br>
+            <label for="lname">Last name: </label>
+            <input type="text" id="lname" fname="lname" placeholder="Last">
+            <br>
+            <input type="image" src="/Pic/img_submit.gif" alt="Submit" width="48" height="45">
+            <hr>
+
+            <!-- type file -->
+            <p>Type: file</p>
+            <label for="myfile">Choose a file: </label>
+            <input type="file" name="myfile" id="myfile">
+            <hr>
+
+            <!-- type hidden -->
+            <p>Type: hidden</p>
+            <label for="fname">Name: </label>
+            <input type="text" id="fname" name="fname" placeholder="First">
+
+            <input type="hidden" id="lname" name="custID" value="3456">
+            <input type="button" value="Submit!">
+            <hr>
+
+            <!-- type month -->
+            <p>Type: month</p>
+            <label for="bdaymonth">Birthday (Month and Year): </label>
+            <input type="month" id="bdaymonth" name="bdaymonth">
+            <hr>
+
+            <!-- type number -->
+            <p>Type: number</p>
+            <label for="quantity">Quantity (between 1-5): </label>
+            <input type="number" name="quantity" id="quantity" min="1" max="5">
+            <input type="button" value="Submit">
+            <hr>
+
+            <!-- type range -->
+            <p>Type: range</p>
+            <label for="range">Volume(between 0 - 10): </label>
+            <input type="range" name="vol" id="range" min="0" max="10">
+            <hr>
+
+            <!-- type search -->
+            <p>Type: search</p>
+            <label for="gsearch">Google Search: </label>
+            <input type="search" name="gsearch" id="gsearch">
+            <input type="button" value="Search">
+            <hr>
+
+            <!-- type tel -->
+            <p>Type: tel</p>
+            <label for="phone">Enter Phone Number: </label>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" placeholder="243-7658-234"5
+                required maxlength="10">
+            <input type="button" value="Submit!">
+            <br>
+            <small>Formate: 123-4567-890</small>
+
+            <!-- type time -->
+            <p>Type: Time</p>
+            <label for="time">Select a Time: </label>
+            <input type="time" name="time" id="time">
+            <hr>
+
+            <!-- type url -->
+            <p>Type: Url</p>
+            <label for="links">Add your homepage: </label>
+            <input type="url" name="homepage" id="link">
+            <br>
+            <input type="button" value="Submit">
+            <hr>
+
+            <!-- type week -->
+            <p>Type: Week</p>
+            <label for="week">Select a week: </label>
+            <input type="week" name="week" id="week">
+            <hr>
+        </fieldset>
+
+        <!-- **************************************************************************************** -->
+
+        <h2 style="text-align: center;"><u>Input Attribute</u></h2>
+        <fieldset>
+            <legend>Input Attribute</legend>
+
+            <!-- checked: used in checkbox or radio button pre selected when the page loads-->
+            <p>Attribute: checked</p>
+            Your favourite language: 
+            <br>
+            <input type="checkbox" name="html" id="html1" value="html">
+            <label for="html1">Html</label>
+            <br>
+            <input type="checkbox" name="css" id="css2" value="css" checked>
+            <label for="css2">Css</label>
+            <br>
+            <input type="checkbox" name="java" id="java3" value="java" checked>
+            <label for="java3">Java</label>
+            <br>
+            <input type="button" value="Submit">
+            <hr>
+
+            <!-- disabled: Input field should be disabled -->
+            <p>Attribute: disabled</p>
+            <label for="fname1">First name: </label>
+            <input type="text" id="fname1" name="fname" placeholder="First">
+            <br>
+            <label for="mname1">Middle name: </label>
+            <input type="text" id="mname1" name="mname" placeholder="Middle" disabled>
+            <br>
+            <label for="lname1">Last Name: </label>
+            <input type="text" id="lname1" name="lname" placeholder="Last">
+            <br>
+            <input type="button" value="Submit">
+            <hr>
+
+            <!-- max: maximum and minimum value for an input field -->
+            <p>Attribute: max & min</p>
+            <label for="Qtn">Quantity: </label>
+            <input type="number" name="quantity" id="Qtn" min="1" max="5">
+            <input type="button" value="Submit">
+            <hr>
+
+            <!-- pattern: regular expression to check the input value against -->
+            <p>Attribute: pattern</p>
+            <label for="phone1">Mobile Number: </label>
+            <select name="code" id="country_code">
+                <option value="china">+97</option>
+                <option value="america">+05</option>
+                <option value="india">+91</option>
+                <option value="georgia">+56</option>
+                <option value="pakistan">+93</option>
+                <option value="bhutan">+45</option>
+                <option value="dubai">+02</option>
+            </select>
+            <input type="tel" name="phone" id="phone1" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" maxlength="10">
+            <br>
+            <input type="submit" value="Submit!">
+            <hr>
+
+            <!-- readonly: input field is read only (cannot be filled out) -->
+            <p>Attribute: readonly</p>
+            <label for="fname4">First name: </label>
+            <input type="text" id="fname4" name="fname" placeholder="First">
+            <br>
+            <label for="mname4">Middle name: </label>
+            <input type="text" id="mname4" name="mname" placeholder="Middle" readonly>
+            <br>
+            <label for="lname4">Last Name: </label>
+            <input type="text" id="lname4" name="lname" placeholder="Last">
+            <br>
+            <input type="button" value="Submit">
+            <hr>
+
+            <!-- step: legal number interval for an input field -->
+            <p>Attribute: step</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="100" step="5" value="5">
+
+            <P style="text-align: center;"><b>Designed by</b>😜😍😎<b>@niraj</b></P>
+        </fieldset>
+    </form>
+</body>
+
+</html>

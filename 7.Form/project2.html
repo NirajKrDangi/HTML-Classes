@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Collage Registration Form</title>
+    <style>
+        body, div {
+            background-color: rgb(224, 234, 242);
+        }
+
+        input[type=text], input[type=email], input[type=tel], select, textarea, input[type=button] #dob {
+            width: 100%;
+            padding: 10px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #dob {
+            width: 100%;
+            padding: 10px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form action="https://www.xyz.com" method="post">
+        <div>
+            <h1>College Registration Form</h1>
+            <p>Thank you for applying to our collage. Please fill in the form below to complete the registration process
+                for admission</p>
+        </div>
+        <fieldset style="border: none;">
+
+            <label for="name">Name</label> <br />
+            <input type="text" id="name" name="fname" placeholder="First" required size="15" />
+            <input type="text" id="name" name="lname" placeholder="Last" required size="15" />
+            <br />
+
+            <label for="dob">Date of Birth</label> <br />
+            <input type="date" id="dob" name="dob" required />
+            <br />
+
+            <label for="father_name">Father's name</label> <br />
+            <input type="text" id="father_name" name="first-name" placeholder="First" required size="15" />
+            <input type="text" id="father_name" name="last-name" placeholder="Last" required size="15" />
+            <br />
+
+            <label for="mother_name">Mothers's name</label> <br />
+            <input type="text" id="mother_name" name="first-name" placeholder="First" required size="15" />
+            <input type="text" id="mother_name" name="last-name" placeholder="Last" required size="15" />
+            <br />
+
+            <label for="mail">Email</label> <br />
+            <input type="email" name="email" id="mail" placeholder="domain@zyz.com" required size="36" />
+            <br />
+
+            <label>Gender <br />
+                <input type="radio" name="gender" value="m" /> M
+                <br />
+                <input type="radio" name="gender" value="f" /> F
+            </label>
+            <br />
+
+            <label for="nationality">Nationality</label> <br />
+            <input type="text" name="nationality" id="nationality" required size="36" />
+            <br />
+
+            <label for="add">Home Address</label> <br />
+            <input type="text" name="address" id="add" placeholder="Street Address" required size="36" /> <br />
+
+            <input type="text" name="address" id="add" placeholder="City" required />
+
+            <select name="Country">
+                <option value="america">America</option>
+                <option value="bangkok">Bangkok</option>
+                <option value="canada">Canada</option>
+                <option value="Ieran">Ieran</option>
+                <option value="india">India</option>
+                <option value="nepal">Nepal</option>
+
+            </select>
+            <BR />
+
+            <label for="tel-phone">Telephone - Home</label> <br />
+            <input type="tel" name="home" id="tel-phone" placeholder="### ### ####" size="36" />
+            <br />
+
+            <label for="tel-phone">Telephone - Mobile</label> <br />
+            <input type="tel" name="home" id="tel-phone" placeholder="### ### ####" required size="36" />
+            <br />
+
+            <label for="comment">In a few sentences, Write down why you want to become a student of our College</label>
+            <br />
+            <textarea name="" id="" cols="34" rows="5"></textarea>
+            <br />
+
+            <input type="button" value="Submit">
+            <input type="button" value="Reset">
+
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
